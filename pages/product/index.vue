@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <h1>首頁</h1>
+  <h2>產品主列表</h2>
 </template>
 
 <style scoped></style>
