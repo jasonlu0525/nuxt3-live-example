@@ -27,14 +27,7 @@
 </template>
 
 <style lang="scss" scoped>
-a {
-  margin: 20px 0;
-  display: inline-block;
-}
-.container {
-  max-width: 1320px;
-  margin: 0 auto;
-}
+
 .product {
   display: flex;
   gap: 1rem;
