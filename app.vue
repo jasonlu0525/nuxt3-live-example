@@ -57,7 +57,16 @@
       <NuxtLink to="/contact" activeClass="active">聯絡</NuxtLink>
     </li>
   </ul>
-
+  <hr />
+  <h2>Nuxt pages 資料夾路由功能的特點，以產品頁面路由為例</h2>
+  <ul class="list">
+    <li>
+      <NuxtLink to="/product">產品頁列表</NuxtLink>
+    </li>
+    <li>
+      <NuxtLink to="/product/產品id" replace>產品內頁</NuxtLink>
+    </li>
+  </ul>
   <div>
     <NuxtRouteAnnouncer />
     <NuxtPage />
