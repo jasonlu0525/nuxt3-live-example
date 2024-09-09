@@ -8,11 +8,8 @@ const socialMediaTitle = computed(() => `${title.value} | 關於我們 `);
     <Title>{{ title }}</Title>
     <Meta name="description" :content="description" />
     <Meta name="keywords" content="關鍵詞1, 關鍵詞2" />
-
     <Meta property="og:title" :content="socialMediaTitle" />
     <Meta name="twitter:title" :content="socialMediaTitle" />
-
-    <Base href="https://example.com/" />
     <NoScript
       >此網頁需要支援 JavaScript 才能正確運行，請先至你的瀏覽器設定中開啟
       JavaScript。</NoScript
