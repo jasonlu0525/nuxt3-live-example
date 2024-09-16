@@ -21,8 +21,6 @@ const { data: userTransformData } = await useAsyncData(
     transform: (response) => {
       // 修改 response 的結果，取出並回傳物件結構
       const [resultObject] = response.results;
-      console.log(resultObject);
-
       return resultObject;
     },
   }
