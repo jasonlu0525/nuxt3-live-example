@@ -25,13 +25,11 @@ definePageMeta({
     ).catch(() => {
       return null;
     });
-    console.log("userInfo", userInfo, userInfo?.status !== undefined);
 
     if (userInfo?.status !== undefined) {
       // 驗證成功，終止函式執行
       return;
     }
-    console.log("isLoggedIn", userInfo);
 
     // 驗證失敗，導引回登入頁面
     // 在伺服器端和客戶端操作路由
