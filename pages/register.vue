@@ -41,57 +41,57 @@ const createUserAccount = (body) => {
   <div class="container py-5">
     <div class="col-8 mx-auto">
       <h2 class="h3 mb-4">註冊</h2>
+      <form @submit.prevent="createUserAccount(registrationFormData)">
+        <div class="mb-4">
+          <label for="nickName">暱稱<span class="text-danger">*</span></label>
+          <input
+            type="text"
+            class="form-control"
+            id="nickName"
+            placeholder="請輸入您的暱稱"
+            required
+            v-model="registrationFormData.nickname"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="email">信箱 <span class="text-danger">*</span></label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="example@gmail.com"
+            required
+            v-model="registrationFormData.email"
+          />
+        </div>
 
-      <div class="mb-4">
-        <label for="nickName">暱稱<span class="text-danger">*</span></label>
-        <input
-          type="text"
-          class="form-control"
-          id="nickName"
-          placeholder="請輸入您的暱稱"
-          required
-          v-model="registrationFormData.nickname"
-        />
-      </div>
-      <div class="mb-4">
-        <label for="email">信箱 <span class="text-danger">*</span></label>
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          placeholder="example@gmail.com"
-          required
-          v-model="registrationFormData.email"
-        />
-      </div>
-
-      <div class="mb-4">
-        <label for="password">密碼 <span class="text-danger">*</span></label>
-        <input
-          type="password"
-          class="form-control"
-          id="password"
-          placeholder="請輸入密碼"
-          required
-          v-model="registrationFormData.password"
-        />
-      </div>
-      <div class="d-flex gap-3">
-        <button
-          class="btn btn-primary w-50"
-          type="button"
-          @click="createUserAccount(registrationFormData)"
-          :disabled="isEnabled"
-        >
-          註冊
-        </button>
-        <NuxtLink
-          to="/login"
-          class="btn btn-outline-primary w-50"
-          :class="{ disabled: isEnabled }"
-          >已經有帳號</NuxtLink
-        >
-      </div>
+        <div class="mb-4">
+          <label for="password">密碼 <span class="text-danger">*</span></label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="請輸入密碼"
+            required
+            v-model="registrationFormData.password"
+          />
+        </div>
+        <div class="d-flex gap-3">
+          <button
+            class="btn btn-primary w-50"
+            type="submit"
+            :disabled="isEnabled"
+          >
+            註冊
+          </button>
+          <NuxtLink
+            to="/login"
+            class="btn btn-outline-primary w-50"
+            :class="{ disabled: isEnabled }"
+            >已經有帳號</NuxtLink
+          >
+        </div>
+      </form>
     </div>
   </div>
 </template>

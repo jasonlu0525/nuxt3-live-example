@@ -43,39 +43,41 @@ const signInUser = (body) => {
   <div class="container py-5">
     <div class="col-6 mx-auto">
       <h2 class="h3 mb-4">登入</h2>
-      <div class="mb-4">
-        <label for="loginemail">信箱 <span class="text-danger">*</span></label>
-        <input
-          type="email"
-          class="form-control"
-          id="loginemail"
-          placeholder="example@gmail.com"
-          required
-          v-model="loginFormData.email"
-        />
-      </div>
-
-      <div class="mb-4">
-        <label for="loginpassword"
-          >密碼 <span class="text-danger">*</span></label
+      <form @submit.prevent="signInUser(loginFormData)">
+        <div class="mb-4">
+          <label for="loginemail"
+            >信箱 <span class="text-danger">*</span></label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="loginemail"
+            placeholder="example@gmail.com"
+            required
+            v-model="loginFormData.email"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="loginpassword"
+            >密碼 <span class="text-danger">*</span></label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="loginpassword"
+            placeholder="請輸入密碼"
+            required
+            v-model="loginFormData.password"
+          />
+        </div>
+        <button
+          class="btn btn-secondary w-100"
+          :disabled="isEnabled"
+          type="submit"
         >
-        <input
-          type="password"
-          class="form-control"
-          id="loginpassword"
-          placeholder="請輸入密碼"
-          required
-          v-model="loginFormData.password"
-        />
-      </div>
-      <button
-        class="btn btn-secondary w-100"
-        :disabled="isEnabled"
-        type="button"
-        @click="signInUser(loginFormData)"
-      >
-        登入
-      </button>
+          登入
+        </button>
+      </form>
     </div>
   </div>
 </template>
