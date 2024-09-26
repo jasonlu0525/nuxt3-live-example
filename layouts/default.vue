@@ -3,7 +3,7 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-      <NuxtLink class="navbar-brand" to="/">Day15 範例</NuxtLink>
+      <NuxtLink class="navbar-brand" to="/">Day19 範例</NuxtLink>
       <button
         class="navbar-toggler"
         type="button"
