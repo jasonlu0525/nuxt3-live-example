@@ -17,7 +17,7 @@ export const useTodoStore = defineStore("todo", () => {
         return data;
       });
     } catch (error) {
-      console.log(error);
+      console.dir(error);
     } finally {
       isFetch.value = false;
     }
@@ -44,11 +44,9 @@ export const useTodoStore = defineStore("todo", () => {
         "status",
       }
       */
-      console.log(newTodo);
-
       todoList.value.push(newTodo);
     } catch (error) {
-      console.log(error);
+      console.dir(error);
     } finally {
       isFetch.value = false;
     }
@@ -65,7 +63,7 @@ export const useTodoStore = defineStore("todo", () => {
       });
       todoList.value.splice(todoIndex, 1);
     } catch (error) {
-      console.log(error);
+      console.dir(error);
     } finally {
       isFetch.value = false;
     }
