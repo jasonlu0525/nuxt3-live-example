@@ -18,7 +18,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <NuxtLink class="nav-link" to="/">todolist 註冊與登入 </NuxtLink>
+            <NuxtLink class="nav-link" to="/register">todolist 註冊 </NuxtLink>
+          </li>
+          <li class="nav-item">
+            <NuxtLink class="nav-link" to="/login">todolist 登入 </NuxtLink>
           </li>
 
           <li class="nav-item">

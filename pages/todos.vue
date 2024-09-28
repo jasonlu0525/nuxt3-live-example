@@ -1,9 +1,18 @@
 <script setup>
 definePageMeta({
-  middleware: () => {
+  middleware: async () => {
     // 檢查 token 是否有值
     const cookie = useCookie("auth");
     if (!cookie.value) return navigateTo("/");
+
+    const { error } = await useFetch(
+      "https://todolist-api.hexschool.io/users/checkout",
+      {
+        headers: { Authorization: cookie.value },
+      }
+    );
+
+    if (error.value) return navigateTo("/");
   },
 });
 const cookie = useCookie("auth");
