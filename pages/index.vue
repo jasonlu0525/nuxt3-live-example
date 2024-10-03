@@ -33,17 +33,19 @@ function clearCookie() {
 </script>
 
 <template>
-  <h1>useCookie 範例</h1>
+  <div class="container py-5">
+    <h1>useCookie 範例</h1>
 
-  <h2>寫入 cookie</h2>
-  {{ userCookie }}
-  <h2>取得 cookie</h2>
-  {{ getUserCookie }}
+    <h2>寫入 cookie</h2>
+    {{ userCookie }}
+    <h2>取得 cookie</h2>
+    {{ getUserCookie }}
 
-  <h2>清除 cookie</h2>
-  {{ cartCookie }}
-  <br />
-  <button @click="clearCookie">清除 cookie</button>
+    <h2>清除 cookie</h2>
+    {{ cartCookie }}
+    <br />
+    <button @click="clearCookie">清除 cookie</button>
+  </div>
 </template>
 
 <style scoped></style>
