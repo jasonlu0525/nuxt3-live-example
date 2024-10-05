@@ -5,8 +5,6 @@ const onSubmit = (value, { resetForm }) => {
   // 可以從第二個參數取出 resetForm 方法來重置表單
   resetForm();
 };
-
-const tag = ref("div");
 </script>
 
 <template>
