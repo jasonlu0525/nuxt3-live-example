@@ -44,6 +44,11 @@ export const useTodoStore = defineStore("todo", () => {
         "status",
       }
       */
+
+      // await getTodo(token);
+      // 因為不應在客戶端操作 useAsyncData，所以不使用 getTodo 方法更新 todoList 資料
+
+      // 改成使用陣列 push() 更新資料來以減少 API 請求次數
       todoList.value.push(newTodo);
     } catch (error) {
       console.dir(error);
