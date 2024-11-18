@@ -2,10 +2,10 @@
 // 取得 stores/todo.js 定義的 useTodoStore
 const todoStore = useTodoStore();
 
-// 方法 可以直接解構
+// actions 的方法可以直接解構
 const { addTodo, removeTodo } = todoStore;
 
-// 資料 和 computed 具有響應性，需經過 storeToRefs 解構
+// state 資料和 getters 具有響應性，需經過 storeToRefs 解構
 const { todoList, todoQuantity } = storeToRefs(todoStore);
 
 const newTodo = ref("");
